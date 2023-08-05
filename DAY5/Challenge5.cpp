@@ -21,7 +21,6 @@ int main(){
     cin>>K;
 
     for(int i=0;i<size;i++){
-        int temp = arr[i];
         for(int j=i+1;j<size;j++){
             if(arr[i]+arr[j] == K){
                 count+=1;
