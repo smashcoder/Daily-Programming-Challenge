@@ -1,3 +1,8 @@
+/*
+Day 6 of 30
+Given an unsorted array of N integers, find smallest and largest element in optimal way.
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -33,6 +38,6 @@ int main()
         }
     }
 
-    cout<<"Largest : "<<max<<"\n";
-    cout<<"Smallest : "<<min;
+    cout << "Largest : " << max << "\n";
+    cout << "Smallest : " << min;
 }
