@@ -17,18 +17,17 @@ int main()
 
     for (int i = 0; i < l; i++)
     {
-        char temp = input[i];
         int count = 0;
         for (int j = i + 1; j < l; j++)
         {
-            if (temp == input[j])
+            if (input[i] == input[j])
             {
                 count += 1;
             }
         }
         if (count == 0)
         {
-            cout << temp;
+            cout << input[i];
             flag = true;
             break;
         }
