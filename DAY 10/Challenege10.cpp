@@ -1,3 +1,11 @@
+/*
+Day 10 of 30
+Given a string, find the first non-repeated character in it. If no such character exists, return a specific value (e.g., a special character or -1) to indicate that no non-repeated character is found.
+
+Input: "programming"
+Expected Output: 'p'
+*/
+
 #include <iostream>
 #include <string>
 
