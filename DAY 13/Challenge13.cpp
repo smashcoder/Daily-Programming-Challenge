@@ -36,6 +36,12 @@ int main()
                 i += 1;
                 break;
             }
+            else if (n[i + 1] == 'X')
+            {
+                con += 9;
+                i += 1;
+                break;
+            }
             else
             {
                 con += 1;
@@ -48,9 +54,17 @@ int main()
             {
                 if (n[i + 2] == 'I')
                 {
-                    con += 7;
-                    i += 2;
-                    break;
+                    if (n[i + 3] == 'I')
+                    {
+                        con += 8;
+                        i += 3;
+                    }
+                    else
+                    {
+                        con += 7;
+                        i += 2;
+                        break;
+                    }
                 }
                 else
                 {
@@ -64,6 +78,11 @@ int main()
                 con += 5;
                 break;
             }
+        }
+        if (n[i] == 'X')
+        {
+            con += 10;
+            break;
         }
     }
     cout << con;
