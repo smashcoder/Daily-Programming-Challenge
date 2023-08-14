@@ -35,6 +35,23 @@ int main()
                 con+=10;
             }
         }
+        if(n[i]=='L'){
+            if(n[i-1]=='X'){
+                con+=30;
+            }
+            else{
+                con+=50;
+            }
+        }
+        if(n[i]=='C'){
+            if(n[i-1]=='X'){
+                con+=80;
+            }
+            else{
+                con+=100;
+            }
+        }
+        
     }
     cout << con;
 }
