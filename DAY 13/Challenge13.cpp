@@ -1,3 +1,11 @@
+/*
+
+
+DAY 13 - Convert Roman Number from 1 to 10000 into Natural Number
+
+
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -15,74 +23,73 @@ int main()
     {
         if (n[i] == 'I')
         {
-            if (n[i + 1] == 'I')
-            {
-                if (n[i + 2] == 'I')
-                {
-                    con += 3;
-                    i += 2;
-                    break;
-                }
-                else
-                {
-                    con += 2;
-                    i += 1;
-                    break;
-                }
-            }
-            else if (n[i + 1] == 'V')
-            {
-                con += 4;
-                i += 1;
-                break;
-            }
-            else if (n[i + 1] == 'X')
-            {
-                con += 9;
-                i += 1;
-                break;
-            }
-            else
-            {
-                con += 1;
-                break;
-            }
+            con += 1;
         }
         if (n[i] == 'V')
         {
-            if (n[i + 1] == 'I')
+            if (n[i - 1] == 'I')
             {
-                if (n[i + 2] == 'I')
-                {
-                    if (n[i + 3] == 'I')
-                    {
-                        con += 8;
-                        i += 3;
-                    }
-                    else
-                    {
-                        con += 7;
-                        i += 2;
-                        break;
-                    }
-                }
-                else
-                {
-                    con += 6;
-                    i += 1;
-                    break;
-                }
+                con += 3;
             }
             else
             {
                 con += 5;
-                break;
             }
         }
         if (n[i] == 'X')
         {
-            con += 10;
-            break;
+            if (n[i - 1] == 'I')
+            {
+                con += 8;
+            }
+            else
+            {
+                con += 10;
+            }
+        }
+        if (n[i] == 'L')
+        {
+            if (n[i - 1] == 'X')
+            {
+                con += 30;
+            }
+            else
+            {
+                con += 50;
+            }
+        }
+        if (n[i] == 'C')
+        {
+            if (n[i - 1] == 'X')
+            {
+                con += 80;
+            }
+            else
+            {
+                con += 100;
+            }
+        }
+        if (n[i] == 'D')
+        {
+            if (n[i - 1] == 'C')
+            {
+                con += 300;
+            }
+            else
+            {
+                con += 500;
+            }
+        }
+        if (n[i] == 'M')
+        {
+            if (n[i - 1] == 'C')
+            {
+                con += 800;
+            }
+            else
+            {
+                con += 1000;
+            }
         }
     }
     cout << con;
